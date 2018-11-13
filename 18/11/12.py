@@ -19,7 +19,10 @@ font("Helvetica Neue")
 
 # GRID
 def grid(INC):
-    stroke(0.1)
+    # SET STYLE
+    lineJoin("round")
+    lineCap("round")
+    stroke(0.05)
     STX, STY = 0, 0
     INX, INY = (W-(M*2))/INC, (H-(M*2))/INC
     for x in range(INC+1):
@@ -37,7 +40,7 @@ def new_page():
     rect(0, 0, W, H)
 
 def draw_dot(X, Y):
-    fill(1, 0, 0)
+    fill(1, 1, 0)
     stroke(1,1,0)
     oval(int(X)+(W/2), int(Y)+(W/2), DOT, DOT)
 
@@ -51,19 +54,19 @@ def draw_lines(X, Y):
     line((int(X) + (W/2+DOT/2), W/2), 
         (int(X) + (W/2+DOT/2), int(Y) + (W/2+DOT/2)))
 
-    fill(1,0,0)
+    fill(1,1,0)
     oval((W/2)-DOT/2, (W/2)-DOT/2, DOT, DOT)
     oval(int(X) + (W/2), (W/2)-DOT/2, DOT, DOT)
     #oval(M*2, M*2, W/2, H/2)
 
 for frame in range(F):
+    # SET STYLE
+    #lineJoin("round")
+    #lineCap("round")
     # Draw PAGE
     new_page()
     strokeWidth(10)
     grid(10)
-    # SET STYLE
-    lineJoin("round")
-    lineCap("round")
     # SET DOT POS
     XPO = math.cos(STP) * AMP
     YPO = -1 * math.sin(STP) * AMP
