@@ -17,7 +17,8 @@ for axis, data in listFontVariations().items():
 
 # GRID DRAWING FUNCTION
 def grid(inc):
-    stroke(0.9,0.1,0)
+    stroke(0)
+    strokeWidth(2)
     stpX, stpY = 0, 0
     incX = (W-(M*2))/inc
     incY = (W-(M*2))/inc
@@ -35,7 +36,7 @@ def set_box_style_a():
 
 def set_box_style_b():
     fill(1)
-    stroke(0.9,0.1,0)
+    stroke(0)
 
 def draw_boxes():
     # ROW 1  (x, y, w, h)
@@ -54,7 +55,7 @@ draw_boxes()
 fill(0)
 
 # aaaaaaaaaaaaaaaaaa
-fill(0.9,0.1,0)
+fill(0)
 fontSize(240)
 wght_var = 400
 stroke(1)
@@ -65,7 +66,7 @@ for i in range(10):
     wght_var += 50
     print("a=", wght_var)
 
-stroke(0.9,0.1,0)
+stroke(0)
 oval(M+(U*26), M, U*4, U*4)
 
 # Save GIF
