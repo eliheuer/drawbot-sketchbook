@@ -45,8 +45,9 @@ for frame in range(F):
         stroke(2)
         y = sin(a+t)*96
         f = y*0.01
-        fill(1,f,f/2)
-        stroke(1,f,f/2)
+        fill(0)
+        stroke(1)
+        strokeWidth(2)
         oval((M*2)+(i*64), (M*3.5)+y, M, M)
         t += 0.1
     print(y)
